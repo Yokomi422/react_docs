@@ -1,17 +1,14 @@
 import React from "react";
-import Link from "next/link";
 
 type Props = {
-    title: string;
-}
+  title: string;
+};
 
-export default function Header({ title } : Props) {
-  return(
+export default function Header({ title }: Props) {
+  return (
     <header className="bg-sky-100">
       <nav className="flex p-4 justify-between container mx-auto items-center">
-        <div className="text-2xl">
-          {title}
-        </div>
+        <div className="text-2xl">{title}</div>
       </nav>
     </header>
   );

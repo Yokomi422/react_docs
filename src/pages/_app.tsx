@@ -9,7 +9,7 @@ function MyApp({ Component, pageProps }: AppProps) {
       <div className="bg-sky-100  min-h-screen w-full">
         <Head>
           <title>Next.js + TypeScript + Tailwind CSS practice</title>
-          <meta name='viewport' content='width=device-width, initial-scale=1' />
+          <meta name="viewport" content="width=device-width, initial-scale=1" />
         </Head>
         <Component {...pageProps} />
       </div>

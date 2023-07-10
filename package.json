@@ -6,7 +6,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "npx eslint  './src/**/*.{ts,tsx}' --fix",
+    "format": "npx prettier  './src/**/*.{ts,tsx}' --write",
+    "fix": "npm run lint && npm run format"
   },
   "dependencies": {
     "@types/node": "20.4.1",

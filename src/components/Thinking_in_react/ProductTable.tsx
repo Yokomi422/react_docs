@@ -1,27 +1,30 @@
 import React from "react";
 import ProductRow from "./ProductRow";
 import ProductCategoryRow from "./ProductCategoryRow";
-import { table } from "console";
 
 type Product = {
-    category: string;
-    price: string;
-    stocked: boolean;
-    name: string;
-}
+  category: string;
+  price: string;
+  stocked: boolean;
+  name: string;
+};
 
 type ProductTableProps = {
-    products: Product[];
-    filterText: string;
-    isStockOnly: boolean;
-}
+  products: Product[];
+  filterText: string;
+  isStockOnly: boolean;
+};
 
-export default function ProductTable( { products, filterText, isStockOnly }: ProductTableProps) {
+export default function ProductTable({
+  products,
+  filterText,
+  isStockOnly,
+}: ProductTableProps) {
   const rows = [];
   let lastCategory = "";
   //除外する商品たちを上から抽出していっている
   // ユーザが入力したテキストと一致する商品を抽出
-  products.forEach((product) => {
+  products.forEach(product => {
     if (product.name.toLowerCase().indexOf(filterText) === -1) {
       return;
     }
@@ -35,14 +38,10 @@ export default function ProductTable( { products, filterText, isStockOnly }: Pro
         <ProductCategoryRow
           category={product.category}
           key={product.category}
-        />);
+        />
+      );
     }
-    rows.push(
-      <ProductRow
-        product={product}
-        key={product.name}
-      />
-    );
+    rows.push(<ProductRow product={product} key={product.name} />);
     lastCategory = product.category;
   });
   return (
