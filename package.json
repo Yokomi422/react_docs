@@ -6,8 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "npx eslint  './src/**/*.{ts,tsx}' --fix",
-    "format": "npx prettier  './src/**/*.{ts,tsx}' --write",
+    "lint": "npx eslint --fix .",
+    "format": "npx prettier --write .",
     "fix": "npm run lint && npm run format"
   },
   "dependencies": {
