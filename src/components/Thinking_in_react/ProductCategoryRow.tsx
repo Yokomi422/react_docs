@@ -1,3 +1,4 @@
+import { tr } from "date-fns/locale";
 import React from "react";
 
 type ProductCategoryRowProps = {
@@ -6,10 +7,8 @@ type ProductCategoryRowProps = {
 
 export default function ProductCategoryRow( { category}: ProductCategoryRowProps) {
   return (
-    <div className="text-center border border-cyan-200">
-      <span>
-        {category}
-      </span>
-    </div>
+    <tr>
+      <td>{category}</td>
+    </tr>
   );
 }

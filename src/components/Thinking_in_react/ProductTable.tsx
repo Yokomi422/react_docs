@@ -29,6 +29,7 @@ export default function ProductTable( { products, filterText, isStockOnly }: Pro
     if (isStockOnly && !product.stocked) {
       return;
     }
+    //この分類方法は、jsonがcategoryでソートされていることを前提にした処理をしている。
     if (product.category !== lastCategory) {
       rows.push(
         <ProductCategoryRow
